@@ -3,9 +3,9 @@ var idCliente, opcion;
 opcion = 4;   
 tablaCliente = $('#tablaCliente').DataTable({ 
     "ajax":{            
-        "url": "../Controlador/getcliente.php", 
+        "url": "../Controlador/getantena.php", 
         "method": 'POST', //usamos el metodo POST
-        "data":{opcion:opcion}, //enviamos opcion 4 para que haga un SELECT//OPCION//VALOR
+        "data":{opcion:opcion}, //enviamos opcion 4 para que haga un SELECT
         "dataSrc":""
     },
     "columns":[
@@ -45,7 +45,7 @@ $('#formCliente').submit(function(e){    //submit para el Alta y Actualización
     anchoBanda = $.trim($('#anchoBanda').val());
     idEstado = $.trim($('#idEstado').val());                            
         $.ajax({
-          url: "../Controlador/getcliente.php",
+          url: "../Controlador/getantena.php",
           type: "POST",
           datatype:"json",    
           data:  {idCliente:idCliente, nombre:nombre, apellido:apellido, DNI:DNI, 
@@ -55,8 +55,8 @@ $('#formCliente').submit(function(e){    //submit para el Alta y Actualización
           success: function(data) {
             tablaCliente.ajax.reload(null, false);
            }
-        });			        
-    $('#modalCRUD').modal('hide');											     			
+        });                 
+    $('#modalCRUD').modal('hide');                                                          
 });  
 //para limpiar los campos antes de dar de Alta una Persona
 $("#btnNuevo").click(function(){
@@ -66,12 +66,12 @@ $("#btnNuevo").click(function(){
     $(".modal-header").css( "background-color", "#17a2b8");
     $(".modal-header").css( "color", "white" );
     $(".modal-title").text("Alta de Usuario");
-    $('#modalCRUD').modal('show');	    
+    $('#modalCRUD').modal('show');      
 });
-$(document).on("click", ".btnEditar", function(){	//Editar 	        
+$(document).on("click", ".btnEditar", function(){   //Editar            
     opcion = 2;//editar
-    fila = $(this).closest("tr");	        
-    idCliente = parseInt(fila.find('td:eq(0)').text()); //capturo el ID		            
+    fila = $(this).closest("tr");           
+    idCliente = parseInt(fila.find('td:eq(0)').text()); //capturo el ID                 
     nombre = fila.find('td:eq(1)').text();
     apellido = fila.find('td:eq(2)').text();
     DNI = fila.find('td:eq(3)').text();
@@ -116,26 +116,26 @@ $(document).on("click", ".btnEditar", function(){	//Editar
     $("#F_pago_Saldo").val(F_pago_Saldo);
     $(".modal-header").css("background-color", "#007bff");
     $(".modal-header").css("color", "white" );
-    $(".modal-title").text("Editar Usuario");		
-    $('#modalCRUD').modal('show');	   
+    $(".modal-title").text("Editar Usuario");       
+    $('#modalCRUD').modal('show');     
 });
 
 //Borrar
 $(document).on("click", ".btnBorrar", function(){
     fila = $(this);           
-    idCliente= parseInt($(this).closest('tr').find('td:eq(0)').text()) ;		
+    idCliente= parseInt($(this).closest('tr').find('td:eq(0)').text()) ;        
     opcion = 3; //eliminar        
     var respuesta = confirm("¿Está seguro de borrar el registro "+idCliente+"?");                
     if (respuesta) {            
         $.ajax({
-          url: "../Controlador/getcliente.php",
+          url: "../Controlador/getantena.php",
           type: "POST",
           datatype:"json",    
           data:  {opcion:opcion, idCliente:idCliente},    
           success: function() {
               tablaCliente.row(fila.parents('tr')).remove().draw();
            }
-        });	
+        }); 
     }
  });
      
