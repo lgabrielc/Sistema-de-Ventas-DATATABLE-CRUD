@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		TABLAS
+	</title>
+</head>
+<body>
+		<table>
+			<tr>
+				<td>idUsuario</td>
+				<td>Usuario</td>
+				<td>Password</td>
+				<td>Dni</td>
+				<td>Nombre</td>
+				<td>Apepat</td>
+				<td>Apemat</td>
+				<td>Telefono</td>
+				<td>Correo</td>
+				<td>Estado</td>
+			</tr>
+		</table>
+</body>
+</html>

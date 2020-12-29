@@ -1,0 +1,34 @@
+body{
+    background-color:#dee2e6;
+  
+}
+ table.dataTable thead {
+    background: #007bff;
+    color:white;
+}
+
+.caja{
+  /* border: 1px solid; */
+  padding: 5px;
+  box-shadow: 10px 10px 50px 1px #7c7c81;
+  border-radius: 10px;
+}
+.contenedor{
+	width: 95%;
+	margin:auto;
+}
+header{
+	z-index: 1000;
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 1100px !important;
+}
+}
+@media (min-width: 992px){
+.col-lg-6 {
+  
+    flex: 0 0 25% !important;
+}
+}
