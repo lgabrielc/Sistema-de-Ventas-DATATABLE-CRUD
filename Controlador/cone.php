@@ -4,7 +4,7 @@ class Conexion
 	private $conexion;
 	
 	public function __construct () {
-		$this->conexion = new mysqli("localhost","root","12345678","bd_arapas");
+		$this->conexion = new mysqli("localhost","root","admin","bd_arapas");
 		$this->conexion->set_charset('utf8');
 	}
 
