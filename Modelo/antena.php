@@ -32,7 +32,7 @@
         {
             $conexion = new Conexion();
             $consulta = "UPDATE antena SET nombreAntena='$nombreAntena', ip='$ip', mac='$mac', frecuencia='$frecuencia', canal='$canal', idServidor='$idServidor', idTorre='$idTorre', idTipo='$idTipo' WHERE idAntena = '$idAntena' ";
-            $resultado = $conexion->conexion($consulta);
+            $resultado = $conexion->consultar($consulta);
             $consulta = "SELECT `idAntena`,`nombreAntena`,`ip`,`mac`,`frecuencia`,`canal`,`idServidor`,`idTorre`,`idTipo` FROM `antena`";
             $resultado = $conexion->consultar($consulta);
             return $resultado;

@@ -13,10 +13,10 @@
     $idServidor     = (isset($_POST['idServidor'])) ? $_POST['idServidor'] : '';
     $idTorre        = (isset($_POST['idTorre'])) ? $_POST['idTorre'] : '';
     $idTipo         = (isset($_POST['idTipo'])) ? $_POST['idTipo'] : '';
-    $option         = (isset($_POST['option'])) ? $_POST['option'] : '';
+    $opcion         = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
    
 
-    switch ($option) {
+    switch ($opcion) {
         case 1:
             $data = $objAntena->ingresarAntena($nombreAntena,$ip,$mac,$frecuencia,$canal,$idServidor,$idTorre,$idTipo);
             print json_encode($data, JSON_UNESCAPED_UNICODE);
