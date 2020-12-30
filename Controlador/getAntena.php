@@ -4,7 +4,7 @@
     $objAntena = new controlAntena;
 
 
-    $idAntena       = (isset($_POST['idAntena'])) ? $_POST['idAntena'] : '';
+   
     $nombreAntena   = (isset($_POST['nombreAntena'])) ? $_POST['nombreAntena'] : '';
     $ip             = (isset($_POST['ip'])) ? $_POST['ip'] : '';
     $mac            = (isset($_POST['mac'])) ? $_POST['mac'] : '';
@@ -14,7 +14,7 @@
     $idTorre        = (isset($_POST['idTorre'])) ? $_POST['idTorre'] : '';
     $idTipo         = (isset($_POST['idTipo'])) ? $_POST['idTipo'] : '';
     $opcion         = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
-   
+    $idAntena       = (isset($_POST['idAntena'])) ? $_POST['idAntena'] : ''; 
 
     switch ($opcion) {
         case 1:
