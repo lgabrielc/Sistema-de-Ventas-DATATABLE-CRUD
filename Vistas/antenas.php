@@ -44,17 +44,17 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th>IP</th>
+                            <th>Ip</th>
                             <th>MAC</th>                                
                             <th>Frecuencia</th>  
                             <th>Canal</th>
-                            <th>IDAntena</th>
+                            <th>IDServidor</th>
                             <th>IDTorre</th>
                             <th>IDTipo</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody>                            
+                    <tbody>                          
                     </tbody>        
                 </table>               
             </div>
@@ -81,7 +81,7 @@
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">IP</label>
+                    <label for="" class="col-form-label">Ip</label>
                     <input type="text" class="form-control" id="ip">
                     </div> 
                     </div>    
@@ -89,7 +89,7 @@
                 <div class="row"> 
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">MAC</label>
+                    <label for="" class="col-form-label">Mac</label>
                     <input type="text" class="form-control" id="mac">
                     </div>               
                     </div>
@@ -110,7 +110,7 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">IDServidor</label>
-                    <input type="text" class="form-control" id="idServidor">
+                    <input type="number" class="form-control" id="idServidor">
                     </div>
                     </div>  
                 </div>                
@@ -118,19 +118,19 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">IDTorre</label>
-                    <input type="text" class="form-control" id="idTorre">
+                    <input type="number" class="form-control" id="idTorre">
                     </div>
                     </div>    
                     <div class="col-lg-6">    
                     <div class="form-group">
                     <label for="" class="col-form-label">IDTipo</label>
-                    <input type="text" class="form-control" id="idTipo">
+                    <input type="number" class="form-control" id="idTipo">
                     </div>            
                     </div>    
                 </div>          
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal" >Cancelar</button>
                 <button type="submit" id="btnGuardar" class="btn btn-dark">Guardar</button>
             </div>
         </form>    
@@ -139,7 +139,7 @@
 </div>  
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
-    <script src="../assets/popper/popper.min.js"></script>
+    
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>  
     <!-- datatables JS -->
     <script type="text/javascript" src="../assets/datatables/datatables.min.js"></script>    

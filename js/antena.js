@@ -22,7 +22,8 @@ tablaAntena = $('#tablaAntena').DataTable({
     ],
 });     
 var fila; //captura la fila, para editar o eliminar
-$('#formAntena').submit(function(e){    //submit para el Alta y Actualización                
+//submit para el Alta y Actualización
+$('#formAntena').submit(function(e){                    
     e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
     nombreAntena = $.trim($('#nombreAntena').val());    
     ip = $.trim($('#ip').val());
@@ -31,20 +32,20 @@ $('#formAntena').submit(function(e){    //submit para el Alta y Actualización
     canal = $.trim($('#canal').val());
     idServidor = $.trim($('#idServidor').val());
     idTorre = $.trim($('#idTorre').val());
-    idTipo = $.trim($('#idTipo').val());                       
+    idTipo = $.trim($('#idTipo').val());                            
         $.ajax({
           url: "../Controlador/getAntena.php",
           type: "POST",
           datatype:"json",    
-          data:  {idAntena:idAntena, nombreAntena:nombreAntena, ip:ip, mac:mac, 
-            frecuencia:frecuencia, canal:canal, idServidor:idServidor, idTorre:idTorre,
-            idTipo:idTipo ,opcion:opcion},    
+          data:  {idAntena:idAntena, nombreAntena:nombreAntena, ip:ip, mac:mac, frecuencia:frecuencia, canal:canal,idServidor:idServidor,idTorre:idTorre,idTipo:idTipo,opcion:opcion},    
           success: function(data) {
             tablaAntena.ajax.reload(null, false);
            }
-        });                 
-    $('#modalCRUD').modal('hide');                                                          
-});  
+        });			        
+    $('#modalCRUD').modal('hide');											     			
+});
+        
+ 
 //para limpiar los campos antes de dar de Alta una Persona
 $("#btnNuevo").click(function(){
     opcion = 1; //alta           
@@ -60,13 +61,13 @@ $(document).on("click", ".btnEditar", function(){   //Editar
     fila = $(this).closest("tr");           
     idAntena = parseInt(fila.find('td:eq(0)').text()); //capturo el ID                 
     nombreAntena = fila.find('td:eq(1)').text();
-    ip = fila.find('td:eq(2)').text();
-    mac = fila.find('td:eq(3)').text();
-    frecuencia = fila.find('td:eq(4)').text();
-    canal = fila.find('td:eq(5)').text();
-    idServidor = fila.find('td:eq(6)').text();
-    idTorre = fila.find('td:eq(7)').text();
-    idTipo = fila.find('td:eq(8)').text();
+    ip           = fila.find('td:eq(2)').text();
+    mac          = fila.find('td:eq(3)').text();
+    frecuencia   = fila.find('td:eq(4)').text();
+    canal        = fila.find('td:eq(5)').text();
+    idServidor   = fila.find('td:eq(6)').text();
+    idTorre      = fila.find('td:eq(7)').text();
+    idTipo       = fila.find('td:eq(8)').text();
     $("#nombreAntena").val(nombreAntena);
     $("#ip").val(ip);
     $("#mac").val(mac);

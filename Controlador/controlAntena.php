@@ -16,7 +16,7 @@
             $objAntena = new Antena;
             $respuesta = $objAntena->ingresarAntena($nombreAntena,$ip,$mac,$frecuencia,$canal,$idServidor,$idTorre,$idTipo);
             $data = $respuesta->fetch_all(MYSQLI_ASSOC);
-            return $data;
+            return $respuesta;
         }
 
         public function actualizarAntena($idAntena,$nombreAntena,$ip,$mac,$frecuencia,$canal,$idServidor,$idTorre,$idTipo)
@@ -30,7 +30,9 @@
         public function eliminarAntena($idAntena)
         {
             $objAntena=new Antena;
-            $objAntena->eliminarAntena($idAntena);
+            $respuesta=$objAntena->eliminarAntena($idAntena);
+ //           $data = $respuesta->fetch_all(MYSQLI_ASSOC);
+            return $respuesta;
         }
     }
 ?>

@@ -30,7 +30,7 @@
 			include_once("../Modelo/cliente.php");
 			$objCliente=new Cliente;
 			$objCliente->eliminarCliente($idCliente);
-			//$data=$respuesta ->fetch_all(MYSQLI_ASSOC);
+			$data=$respuesta ->fetch_all(MYSQLI_ASSOC);
 		}		
 	}
 
