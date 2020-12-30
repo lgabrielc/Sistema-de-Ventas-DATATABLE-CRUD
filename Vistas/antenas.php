@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-lg-12">
             <div class="table-responsive">        
-                <table id="tablaUsuarios" class="table table-striped table-bordered table-condensed" style="width:100%" >
+                <table id="tablaAntena" class="table table-striped table-bordered table-condensed" style="width:100%" >
                     <thead class="text-center">
                         <tr>
                             <th>ID</th>
@@ -70,19 +70,19 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form id="formUsuarios">    
+        <form id="formAntena">    
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">Nombre</label>
-                    <input type="text" class="form-control" id="usuario">
+                    <input type="text" class="form-control" id="nombreAntena">
                     </div>
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">IP</label>
-                    <input type="text" class="form-control" id="password">
+                    <input type="text" class="form-control" id="ip">
                     </div> 
                     </div>    
                 </div>
@@ -90,13 +90,13 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">MAC</label>
-                    <input type="text" class="form-control" id="dni">
+                    <input type="text" class="form-control" id="mac">
                     </div>               
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">Frecuencia</label>
-                    <input type="text" class="form-control" id="nombre">
+                    <input type="text" class="form-control" id="frecuencia">
                     </div>
                     </div>  
                 </div>
@@ -104,13 +104,13 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">Canal</label>
-                    <input type="text" class="form-control" id="apepat">
+                    <input type="text" class="form-control" id="canal">
                     </div>               
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                    <label for="" class="col-form-label">IDAntena</label>
-                    <input type="text" class="form-control" id="apemat">
+                    <label for="" class="col-form-label">IDServidor</label>
+                    <input type="text" class="form-control" id="idServidor">
                     </div>
                     </div>  
                 </div>                
@@ -118,13 +118,13 @@
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">IDTorre</label>
-                    <input type="text" class="form-control" id="telefono">
+                    <input type="text" class="form-control" id="idTorre">
                     </div>
                     </div>    
                     <div class="col-lg-6">    
                     <div class="form-group">
                     <label for="" class="col-form-label">IDTipo</label>
-                    <input type="text" class="form-control" id="correo">
+                    <input type="text" class="form-control" id="idTipo">
                     </div>            
                     </div>    
                 </div>          
