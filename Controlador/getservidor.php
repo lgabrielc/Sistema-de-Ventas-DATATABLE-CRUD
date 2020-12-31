@@ -11,7 +11,7 @@
 	switch ($opcion) {
 
 		case 1:
-			$data=$ojbControlador->agregarServidor($nombreServidor,$ipEntradam,$ipSalida);
+			$data=$ojbControlador->agregarServidor($nombreServidor,$ipEntrada,$ipSalida);
 			print json_encode($data,JSON_UNESCAPED_UNICODE);
 			break;
 		case 2:
