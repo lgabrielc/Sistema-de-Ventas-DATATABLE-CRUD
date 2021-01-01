@@ -85,7 +85,6 @@
                     <input type="text" class="form-control" id="nombre">
                     </div>
                     </div> 
-
                     <div class="col-lg-6">
                     <div class="form-group">
                     <label for="" class="col-form-label">Apellidos</label>

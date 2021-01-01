@@ -12,7 +12,9 @@
 		public function editarServidor($idServidor,$nombreServidor,$ipEntrada,$ipSalida)
 		{
 			$conexion=new Conexion();
-			$consulta="UPDATE servidor SET nombreServidor='$nombreServidor',ipEntrada='$ipEntrada',ipSalida='$ipSalida' WHERE ipServidor='$ipServidor' ";
+			$consulta="UPDATE servidor SET nombreServidor='$nombreServidor',ipEntrada='$ipEntrada',ipSalida='$ipSalida' WHERE idServidor='$idServidor' ";
+			$respuesta=$conexion->consultar($consulta);
+			$consulta="SELECT * FROM servidor";
 			$respuesta=$conexion->consultar($consulta);
 			return $respuesta;
 		}
